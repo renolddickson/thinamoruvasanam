@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Tamil:ital@1&display=swap');
 :root {
   --brown: #7A7978;
   --notebook: tomato;
@@ -230,7 +230,7 @@ h2{
   align-items: center;
 }
 h2{
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Tiro Tamil', serif;
 
 }
 .share-mobile{
