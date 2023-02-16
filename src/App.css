@@ -1,38 +1,291 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+:root {
+  --brown: #7A7978;
+  --notebook: tomato;
+  --shaddow: #A44A3F;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.App{
+  height: 100vh;
+  overflow: hidden;
+}
+
+.box {
+  position: relative;
+  width: 700px;
+  height: 600px;
+  display: flex;
+  margin: 5% auto auto auto;
+}
+
+.spiral {
+  position: absolute;
+  width: 4%;
+  height: 4%;
+  border-left: 4px solid black;
+  border-bottom: 2px solid black;
+  border-right: 5px solid var(--notebook);
+  left: 30%;
+  top: 10%;
+  border-radius: 50%;
+  transform: rotate(35deg) skew(-40deg, -10deg);
+
+}
+
+.spiral:nth-of-type(2) {
+  top: 15%;
+}
+
+.spiral:nth-of-type(3) {
+  top: 20%;
+}
+
+.spiral:nth-of-type(4) {
+  top: 25%;
+}
+
+.spiral:nth-of-type(5) {
+  top: 30%;
+}
+
+.spiral:nth-of-type(6) {
+  top: 35%;
+}
+
+.spiral:nth-of-type(7) {
+  top: 40%;
+}
+
+.spiral:nth-of-type(8) {
+  top: 45%;
+}
+
+.spiral:nth-of-type(9) {
+  top: 50%;
+}
+
+.spiral:nth-of-type(10) {
+  top: 55%;
+}
+
+.spiral:nth-of-type(11) {
+  top: 60%;
+}
+
+.spiral:nth-of-type(12) {
+  top: 65%;
+}
+
+.spiral:nth-of-type(13) {
+  top: 70%;
+}
+
+.spiral:nth-of-type(14) {
+  top: 75%;
+}
+
+.cover {
+  position: absolute;
+  width: 50%;
+  height: 75%;
+  background: var(--notebook);
+  left: 32%;
+  top: 8%;
+  box-shadow: 20px 10px 80px #14080E;
+
+}
+
+.holder {
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  border-radius: 50%;
+  background: black;
+  top: 3%;
+  left: 3%;
+}
+
+.holder:nth-of-type(2) {
+  top: 10%;
+}
+
+.holder:nth-of-type(3) {
+  top: 16%;
+}
+
+.holder:nth-of-type(4) {
+  top: 23%;
+}
+
+.holder:nth-of-type(5) {
+  top: 30%;
+}
+
+.holder:nth-of-type(6) {
+  top: 36.5%;
+}
+
+.holder:nth-of-type(7) {
+  top: 43%;
+}
+
+.holder:nth-of-type(8) {
+  top: 50%;
+}
+
+.holder:nth-of-type(9) {
+  top: 56.5%;
+}
+
+.holder:nth-of-type(10) {
+  top: 63%;
+}
+
+.holder:nth-of-type(11) {
+  top: 70%;
+}
+
+.holder:nth-of-type(12) {
+  top: 76.5%;
+}
+
+.holder:nth-of-type(13) {
+  top: 83%;
+}
+
+.holder:nth-of-type(14) {
+  top: 90%;
+}
+
+.line {
+  position: absolute;
+  width: 80%;
+  height: 25%;
+  left: 10%;
+  top: 10%;
+  border-bottom: 1px solid #7FC2FE;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.line span {
+  font-size: 2em;
+  color: grey;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.line:nth-of-type(2) {
+  top: 45%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.quotes{
+  position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: -40px;
+  height: 100%;
+  width: 100%; 
 }
-
-.App-link {
-  color: #61dafb;
+.share-pc{
+  cursor: pointer;
 }
+h2{
+  width: 80%;
+  text-align: center;
+  animation: fade-in 0.5s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+.mobilequotes{
+  display: none;
+}
+.author{
+  padding-left: 40%;
+}
+.mobilequotes img{
+  height: 50px;
+  padding-right: 250px;
+  padding-bottom: 30px;
+}
+.quotes img{
+  height: 50px;
+  padding-right: 210px;
+  padding-bottom: 30px;
+}
+.top{
+  position: absolute;
+  font-size: 20px;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  width: 100px;
+  align-items: center;
+}
+h2{
+  font-family: 'Dancing Script', cursive;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+.share-mobile{
+  display: none;
+}
+.tick{
+  background-color: rgba(24, 233, 87, 0.2);
+  padding-inline: 5px;
+  border-radius: 5px;
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+}
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+@media all and (max-width:510px) {
+  .box {
+    display: none;
+  }
+  .share-pc{
+    display: none;
+  }
+  .share-mobile{
+    display: block;
+  }
+  .mobilequotes{
+  display: flex;
+  margin-top: -70px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.96);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  }
+ 
+  .spiral {
+    width: 3%;
+    height: 3%;
+    border-left: 3px solid black;
+    border-bottom: 1px solid black;
+    border-right: 3px solid var(--notebook);
+  }
+  .line span {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 2em;
   }
 }
